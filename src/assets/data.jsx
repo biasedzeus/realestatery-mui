@@ -1,3 +1,4 @@
+
 export const productList = [
   {
     id: 1,
@@ -6,6 +7,7 @@ export const productList = [
     propertyType: "Houses",
     isPopular:false,
     price: 5549,
+    moveInDate:new Date(2022,11,12),
     bhk: {
       rooms: "3",
       bathrooms: "2",
@@ -25,6 +27,7 @@ export const productList = [
     description: "Villa with Pool",
     price: 8899,
     isPopular:true,
+    moveInDate:new Date(2022,11,12),
     bhk: {
       rooms: "5",
       bathrooms: "3",
@@ -45,6 +48,8 @@ export const productList = [
     description: "A nice Apartment",
     price: 1249,
     isPopular:true,
+    moveInDate:new Date(2023,9,12),
+
     bhk: {
       rooms: "2",
       bathrooms: "1",
@@ -56,6 +61,7 @@ export const productList = [
       state: "North Dakota",
     },
     propertyType: "Apartments",
+    image:'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YXBhcnRtZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
    
   },
   {
@@ -64,6 +70,7 @@ export const productList = [
     description: "Nebraska Best apartments.",
     price: 1280,
     isPopular:true,
+    moveInDate:new Date(2022,11,12),
     bhk: {
       rooms: "2",
       bathrooms: "1",
@@ -84,6 +91,8 @@ export const productList = [
     description: "KnoxVille Best apartments.",
     price: 1280,
     isPopular:true,
+    moveInDate:new Date(2022,11,12),
+
     bhk: {
       rooms: "4",
       bathrooms: "3",
@@ -104,6 +113,7 @@ export const productList = [
     description: "Nebraska Best apartments.",
     price: 1280,
     isPopular:true,
+    moveInDate:new Date(2022,11,12),
     bhk: {
       rooms: "4",
       bathrooms: "2",
@@ -124,6 +134,7 @@ export const productList = [
     description: "Nebraska Best apartments.",
     price: 1280,
     isPopular:true,
+    moveInDate:new Date(2022,11,12),
     bhk: {
       rooms: "4",
       bathrooms: "3",
@@ -144,6 +155,7 @@ export const productList = [
     description: "Nebraska Best apartments.",
     price: 4520,
     isPopular:true,
+    moveInDate:new Date(2022,11,12),
     bhk: {
       rooms: "4",
       bathrooms: "2",
