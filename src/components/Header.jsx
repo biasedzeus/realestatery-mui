@@ -1,10 +1,7 @@
 import styled from "@emotion/styled";
 import {
-    Box,
   Button,
   IconButton,
-  Link,
-  List,
   ListItem,
   ListItemButton,
   ListItemText,
@@ -17,7 +14,6 @@ import { RiHomeSmile2Fill } from "react-icons/ri";
 import {ImMenu} from 'react-icons/im';
 
 const HeaderContainer = styled(Stack)({
-  // backgroundColor:'red',
   width: "90vw",
   flexDirection: "row",
   justifyContent: "space-around",
