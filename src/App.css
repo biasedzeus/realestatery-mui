@@ -53,3 +53,14 @@ ul li{
   list-style-type: disc;
 
 }
+
+.modal-link{
+  font-weight: 700;
+  padding: 0.4rem;
+
+}
+.modal-link:hover{
+  background-color: purple;
+  color: white;
+  transition: 200ms ease-in-out;
+}

@@ -40,8 +40,14 @@ export default function NotifyModal({open,handleClose,handleOpen}) {
             </ul>
           </Typography>
           
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            To check source code  <a href="https://github.com/biasedzeus/realestatery-mui" target="_blank">Source Code</a>
+          <Typography  sx={{ mt: 2 }}>
+            To check source code  <a className='modal-link' href="https://github.com/biasedzeus/realestatery-mui" target="_blank">Source Code</a>
+          </Typography>
+          <br/>
+          <Typography
+          component="a"
+          sx={{ mt: 2 }}>
+            <a className='modal-link' href="https://bhanusingh.website" target="_blank">Check Portfolio & Resume  </a>
           </Typography>
         </Box>
       </Modal>
