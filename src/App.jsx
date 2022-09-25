@@ -20,9 +20,11 @@ const ProductContainer = styled(Stack)({
 });
 
 function App() {
+
+  
   const initialState = {
     location: "",
-    price: "",
+    price: [0, 10000],
     moveInDate: "",
     propertyType: "",
   };
@@ -32,8 +34,6 @@ function App() {
   const [resultsFound, setResultsFound] = useState(true);
   const [filters, setFilters] = useState(initialState);
 
-
-
   const locationList = [
     ...new Set(productList.map((product) => product.address.state)),
   ];
@@ -42,14 +42,10 @@ function App() {
     ...new Set(productList.map((product) => product.propertyType)),
   ];
 
-
   function handleSearchWordChange(e) {
     setSearchWord(e.target.value);
     Searchfilter();
   }
-
-
-
 
   function Searchfilter() {
     if (searchWord) {
@@ -63,39 +59,40 @@ function App() {
     }
   }
 
-
-
-
   function clearFilters() {
     setFilters(initialState);
+    setDisplayData(productList);
   }
 
-
-
-
-
   function applyFilters() {
-
     let updatedList = productList;
-
 
     if (filters.location) {
       updatedList = updatedList.filter(
         (data) => data.address.state === filters.location
-      )}
-
+      );
+    }
 
     if (filters.moveInDate) {
       updatedList = updatedList.filter(
         (data) => differenceInMonths(data.moveInDate, filters.moveInDate) < 4
-      )}
-
+      );
+    }
 
     if (filters.propertyType) {
-      updatedList = updatedList.filter
-      ((data) => data.propertyType === filters.propertyType)
-      }
-    
+      updatedList = updatedList.filter(
+        (data) => data.propertyType === filters.propertyType
+      );
+    }
+
+    if (filters.price.length > 0) {
+      let minPrice = filters.price[0];
+      let maxPrice = filters.price[1];
+      updatedList = updatedList.filter(
+        (data) => data.price >= minPrice && data.price <= maxPrice
+      );
+    }
+
     setDisplayData(updatedList);
     !updatedList.length ? setResultsFound(false) : setResultsFound(true);
   }
@@ -103,7 +100,6 @@ function App() {
   useEffect(() => {
     applyFilters();
   }, []);
-
 
   return (
     <div className="App">
