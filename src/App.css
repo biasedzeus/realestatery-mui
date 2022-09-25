@@ -41,3 +41,15 @@
   border-radius: .5rem !important;
 ;
 }
+
+b{
+  background-color: purple;
+  padding: .2rem;
+  color: white;
+}
+ul li{
+  list-style: none;
+  font-size: 1rem;
+  list-style-type: disc;
+
+}

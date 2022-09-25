@@ -153,7 +153,7 @@ export const productList = [
     id: 8,
     title: "Nebraska Aparts",
     description: "Nebraska Best apartments.",
-    price: 4520,
+    price: 2520,
     isPopular:true,
     moveInDate:new Date(2022,11,12),
     bhk: {
@@ -170,5 +170,90 @@ export const productList = [
     image:'https://images.unsplash.com/photo-1460317442991-0ec209397118?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDR8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'
    
   },
+  {
+    id: 9,
+    title: "Chapel Hill Residence",
+    description: "Nebraska Best apartments.",
+    price: 2520,
+    isPopular:true,
+    moveInDate:new Date(2023,1,12),
+    bhk: {
+      rooms: "4",
+      bathrooms: "2",
+      area: "10 x 15",
+    },
+    address: {
+      street: "102 Raliegh Road",
+      city: "Chapell Hill",
+      state: "Nebraska",
+    },
+    propertyType: "Houses",
+    image:'https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'
+   
+  },
+  {
+    id: 10,
+    title: "Yellow Enclave",
+    description: "Nebraska Best apartments.",
+    price: 3520,
+    isPopular:true,
+    moveInDate:new Date(2023,1,12),
+    bhk: {
+      rooms: "4",
+      bathrooms: "2",
+      area: "10 x 15",
+    },
+    address: {
+      street: "102 Raliegh Road",
+      city: "Chapell Hill",
+      state: "Nebraska",
+    },
+    propertyType: "Houses",
+    image:'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGhvdXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
+   
+  },
+  {
+    id: 11,
+    title: "Yellow Enclave",
+    description: "Nebraska Best apartments.",
+    price: 6520,
+    isPopular:true,
+    moveInDate:new Date(2022,10,12),
+    bhk: {
+      rooms: "4",
+      bathrooms: "2",
+      area: "10 x 15",
+    },
+    address: {
+      street: "102 Raliegh Road",
+      city: "Chapell Hill",
+      state: "Nebraska",
+    },
+    propertyType: "Apartments",
+    image:'https://images.unsplash.com/photo-1630699144867-37acec97df5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGFwYXJ0bWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+   
+  },
+  {
+    id: 12,
+    title: "Enclave Aparts",
+    description: "Nebraska Best apartments.",
+    price: 2520,
+    isPopular:true,
+    moveInDate:new Date(2022,11,12),
+    bhk: {
+      rooms: "4",
+      bathrooms: "2",
+      area: "10 x 15",
+    },
+    address: {
+      street: "102 Raliegh Road",
+      city: "Chapell Hill",
+      state: "Nebraska",
+    },
+    propertyType: "Apartments",
+    image:'https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGFwYXJ0bWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+   
+  },
+  
  
 ];

@@ -9,6 +9,7 @@ import styled from "@emotion/styled";
 import { Stack, Typography } from "@mui/material";
 import SearchBar from "./components/SearchBar";
 import {motion} from 'framer-motion';
+import NotifyModal from "./components/NotifyModal";
 
 const ProductContainer = styled(Stack)({
   width: "90%",
@@ -34,6 +35,12 @@ function App() {
   const [searchWord, setSearchWord] = useState("");
   const [resultsFound, setResultsFound] = useState(true);
   const [filters, setFilters] = useState(initialState);
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  useEffect(() =>handleOpen(),[])
 
   const locationList = [
     ...new Set(productList.map((product) => product.address.state)),
@@ -136,6 +143,10 @@ function App() {
       ) : (
         <Typography>No Results</Typography>
       )}
+      <NotifyModal 
+        open={open} 
+        handleClose={handleClose} 
+        handleOpen={handleOpen} />
     </div>
   );
 }
