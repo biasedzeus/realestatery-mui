@@ -24,7 +24,7 @@ function App() {
     location: "",
     price: "",
     moveInDate: "",
-    PropertyType: "",
+    propertyType: "",
   };
 
   const [displayData, setDisplayData] = useState([]);
@@ -75,12 +75,15 @@ function App() {
 
 
   function applyFilters() {
+
     let updatedList = productList;
+
 
     if (filters.location) {
       updatedList = updatedList.filter(
         (data) => data.address.state === filters.location
       )}
+
 
     if (filters.moveInDate) {
       updatedList = updatedList.filter(
@@ -88,14 +91,11 @@ function App() {
       )}
 
 
-
-    if (filters.PropertyType) {
-      updatedList = updatedList.filter(
-        (data) => data.propertyType === filters.PropertyType
-        )}
-
-
-
+    if (filters.propertyType) {
+      updatedList = updatedList.filter
+      ((data) => data.propertyType === filters.propertyType)
+      }
+    
     setDisplayData(updatedList);
     !updatedList.length ? setResultsFound(false) : setResultsFound(true);
   }
