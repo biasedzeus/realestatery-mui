@@ -17,16 +17,18 @@ import PriceSlider from "./Slider";
 import { MdClearAll } from "react-icons/md";
 
 const FilterContainer = styled(Stack)({
-  flexDirection: "row",
+  flexDirection: {xs:'column',sm:'row'},
   alignItems: "center",
   backgroundColor: "white",
   width: "80%",
   borderRadius: "10px",
   justifyContent: "space-around",
+  marginBottom:"3rem"
 });
 
 const buttonStyles = {
   backgroundColor: "purple",
+  marginTop:'auto 0',
 };
 
 
@@ -42,10 +44,8 @@ const FilterBar = ({
   propertyTypeList,
   clearFilters,
 }) => {
-  const [filtersApplied, setFiltersApplied] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null);
 
- 
+  const [anchorEl, setAnchorEl] = useState(null);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -61,13 +61,15 @@ const FilterBar = ({
   console.log(filters.moveInDate.$d);
   console.log("property", filters);
   return (
-    <FilterContainer>
+    <FilterContainer
+     flexDirection= {{xs:'column',md:'row'}}
+    >
       <Stack
-        flexDirection="row"
+        flexDirection={{xs:'column',sm:'row'}}
         alignItems="center"
         justifyContent="space-around"
       >
-        <FormControl sx={{ m: 1, minWidth: 120 }}>
+        <FormControl sx={{ m: 1, minWidth:{xs: 200,md:150} }}>
           <FormHelperText>Location</FormHelperText>
           <Select
             labelId="location"
@@ -87,7 +89,7 @@ const FilterBar = ({
             })}
           </Select>
         </FormControl>
-        <FormControl>
+        <FormControl sx={{ m: 1, maxWidth: {xs:'200px',md:'150px'} }}>
           <FormHelperText>When</FormHelperText>
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DatePicker
@@ -102,7 +104,7 @@ const FilterBar = ({
             />
           </LocalizationProvider>
         </FormControl>
-        <FormControl sx={{ m: 1, minWidth: 100, position: "relative" }}>
+        <FormControl sx={{ m: 1, minWidth: {xs:'200px',md:'120px'}, position: "relative" }}>
           <FormHelperText>Price</FormHelperText>
           <Stack
             component="button"
