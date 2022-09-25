@@ -7,29 +7,24 @@ function valuetext(value) {
   return `${value}°C`;
 }
 
-export default function PriceSlider() {
-  const [value, setValue] = useState([23,7]);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
+export default function PriceSlider({ price, handleChange }) {
   return (
     <Box
       sx={{
-        minWidth:200,
-        padding:'2rem'
-      
+        minWidth: 200,
+        padding: "2rem",
       }}
     >
-        <Typography fontWeight="700">Set Price Range $</Typography>
+      <Typography fontWeight="700">Set Price Range $</Typography>
       <Slider
-        value={value}
-        onChange={handleChange}
+        value={price}
+        onChange={(e, newValue) => handleChange(e, newValue)}
+        min={0}
+        max={10000}
+        step={100}
         valueLabelDisplay="auto"
         sx={{
-        color:"purple"
-
+          color: "purple",
         }}
       />
     </Box>
