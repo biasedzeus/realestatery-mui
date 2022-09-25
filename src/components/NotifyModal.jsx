@@ -20,7 +20,7 @@ export default function NotifyModal({open,handleClose,handleOpen}) {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Button sx={{backgroundColor:'purple',color:'white',fontWeight:'700'}} onClick={handleOpen}>See Hints to Use</Button>
       <Modal
         open={open}
         onClose={handleClose}
