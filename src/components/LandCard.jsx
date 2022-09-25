@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea, Chip, Stack } from "@mui/material";
 import { BiBath, BiBed, BiArea } from "react-icons/bi";
 import styled from "@emotion/styled";
+import {motion} from 'framer-motion';
 
 const BHKIcons = styled(Typography)({
   display: "flex",
@@ -22,7 +23,17 @@ export default function ActionAreaCard({ product }) {
     bhk: { rooms, bathrooms, area },
   } = product;
   return (
-    <Card sx={{ minWidth: 300, maxWidth: 345 }}>
+    <Card 
+    component={motion.div}
+    initial={{ opacity: 0, translateY: 100 }}
+    whileInView={{ opacity: 1, translateY: 0 }}
+    transition={{
+      duration: .5,
+      type: "spring",
+      stiffness: "200",
+    }}
+    viewport={{ once: true }}
+    sx={{ minWidth: 300, maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia component="img" height="140" image={image} alt={title} />
 

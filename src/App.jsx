@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import styled from "@emotion/styled";
 import { Stack, Typography } from "@mui/material";
 import SearchBar from "./components/SearchBar";
+import {motion} from 'framer-motion';
 
 const ProductContainer = styled(Stack)({
   width: "90%",
@@ -118,7 +119,16 @@ function App() {
       />
 
       {resultsFound ? (
-        <ProductContainer>
+        <ProductContainer
+        component={motion.div}
+        initial={{ opacity: 0, translateY: 100 }}
+        whileInView={{ opacity: 1, translateY: 0 }}
+        transition={{
+          duration: .2,
+          type: "spring",
+          stiffness: "200",
+        }}
+        viewport={{ once: true }}>
           {displayData.map((product) => {
             return <LandCard key={product.id} product={product} />;
           })}

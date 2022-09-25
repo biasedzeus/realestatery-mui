@@ -17,7 +17,7 @@ import PriceSlider from "./Slider";
 import { MdClearAll } from "react-icons/md";
 
 const FilterContainer = styled(Stack)({
-  flexDirection: {xs:'column',sm:'row'},
+  flexDirection: {xs:'column',md:'row'},
   alignItems: "center",
   backgroundColor: "white",
   width: "80%",
@@ -65,7 +65,7 @@ const FilterBar = ({
      flexDirection= {{xs:'column',md:'row'}}
     >
       <Stack
-        flexDirection={{xs:'column',sm:'row'}}
+        flexDirection={{xs:'column',md:'row'}}
         alignItems="center"
         justifyContent="space-around"
       >

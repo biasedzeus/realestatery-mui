@@ -14,7 +14,7 @@ import { RiHomeSmile2Fill } from "react-icons/ri";
 import {ImMenu} from 'react-icons/im';
 
 const HeaderContainer = styled(Stack)({
-  width: "90vw",
+  width:{xs: "90%",sm:'10vw'},
   flexDirection: "row",
   justifyContent: "space-around",
   borderBottom: "1px solid black",
@@ -88,10 +88,10 @@ const Header = () => {
           Login
         </Button>
         <Button
-          sx={{ height: "fit-content", backgroundColor: "purple" }}
+          sx={{padding:"0 1rem", backgroundColor: "purple" }}
           variant="contained"
         >
-          Sign Up
+          SignUp
         </Button>
       </Stack>
     </HeaderContainer>
