@@ -15,13 +15,13 @@
 
 
 
-# [estatery](https://app.tango.us/app/workflow/f5562859-ee56-446f-846f-bcf288ad42c5?utm_source=markdown&utm_medium=markdown&utm_campaign=workflow%20export%20links)
+# [estatery](https://realestatery.netlify.app)
 
 
 
 __Date:__ September 25, 2022
 
-__Author:__ Biasedzeus
+__Author:__ Bhanu Singh
 
 
 
